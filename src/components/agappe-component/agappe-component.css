@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+:host {
+    --main-color: rgb(219, 219, 219); 
+    --secondary-color: white; 
+    --third-color: #bbb; 
+    --fourth-color: rgb(100, 100, 100); 
+    --fith-color: #ff8a00;
+  }
+
+h1,h3,address,time {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;    
+    color:var(--fourth-color);
+    text-shadow: 0px 0px 3px var(--secondary-color);
+}
+h1,h3 {    
+    margin: 0.5vw;      
+}
+h1 {font-size: 2.5vw;  font-weight: 600; 
+    background: -webkit-gradient(linear,left top,right top,from(#ff8a00),to(#da1b60));
+    background: linear-gradient(to right,#ff8a00,#da1b60);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.3);
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+
+}
+h3 {font-size: 1.8vw;  font-weight: 500;   }
+
+address,time {
+font-size: 1.2vw;
+display: flex;
+justify-content: flex-end;
+-webkit-justify-content:flex-end;
+
+}
+time:first-of-type  {font-size: 1.8vw;font-weight: 600;}
+.card {
+    
+    border: 1px solid var(--third-color); 
+    background: radial-gradient(ellipse at bottom,var(--secondary-color) 0%, var(--main-color)100%);
+    display: grid;
+    grid-template-rows: 3fr 2fr 2fr;
+    grid-template-columns: 7fr 3fr;
+    align-items: center;
+    border-radius: 1vw;
+    box-shadow: 1px 1px 1px var(--third-color);
+    padding: 0 2vw 0 2vw;
+   
+}
+.star {
+    width: 0;
+    height: 0;
+    margin: 0.5vw 0.2vw 0;
+    color: var(--fith-color);
+    position: relative;
+    display: block;
+    border-right: 1vw solid transparent;
+    border-bottom: 0.7vw solid var(--fith-color);
+    border-left: 1vw solid transparent;
+    -moz-transform: rotate(35deg);
+    -webkit-transform: rotate(35deg);
+    -ms-transform: rotate(35deg);
+    -o-transform: rotate(35deg);
+}
+
+.star:before {
+    height: 0;
+    width: 0;
+    position: absolute;
+    display: block;
+    top: -0.45vw;
+    left: -0.65vw;
+    border-bottom: 0.8vw solid var(--fith-color);
+    border-left: 0.3vw solid transparent;
+    border-right: 0.3vw solid transparent;
+    content: '';
+    -webkit-transform: rotate(-35deg);
+    -moz-transform: rotate(-35deg);
+    -ms-transform: rotate(-35deg);
+    -o-transform: rotate(-35deg);
+}
+
+.star:after {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    display: block;
+    top: 0.03vw;
+    left: -1.05vw;
+    color: var(--fith-color);;
+    border-right: 1vw solid transparent;
+    border-bottom: 0.7vw solid var(--fith-color);
+    border-left: 1vw solid transparent;
+    -webkit-transform: rotate(-70deg);
+    -moz-transform: rotate(-70deg);
+    -ms-transform: rotate(-70deg);
+    -o-transform: rotate(-70deg);
+}
+.rating {display: flex;flex-flow: row;justify-content: flex-start; }

@@ -12,6 +12,35 @@ import '@stencil/core';
 
 export namespace Components {
 
+  interface AgappeComponent {
+    /**
+    * The first name
+    */
+    'first': string;
+    /**
+    * The last name
+    */
+    'last': string;
+    /**
+    * The middle name
+    */
+    'middle': string;
+  }
+  interface AgappeComponentAttributes extends StencilHTMLAttributes {
+    /**
+    * The first name
+    */
+    'first'?: string;
+    /**
+    * The last name
+    */
+    'last'?: string;
+    /**
+    * The middle name
+    */
+    'middle'?: string;
+  }
+
   interface MyComponent {
     /**
     * The first name
@@ -44,13 +73,21 @@ export namespace Components {
 
 declare global {
   interface StencilElementInterfaces {
+    'AgappeComponent': Components.AgappeComponent;
     'MyComponent': Components.MyComponent;
   }
 
   interface StencilIntrinsicElements {
+    'agappe-component': Components.AgappeComponentAttributes;
     'my-component': Components.MyComponentAttributes;
   }
 
+
+  interface HTMLAgappeComponentElement extends Components.AgappeComponent, HTMLStencilElement {}
+  var HTMLAgappeComponentElement: {
+    prototype: HTMLAgappeComponentElement;
+    new (): HTMLAgappeComponentElement;
+  };
 
   interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
   var HTMLMyComponentElement: {
@@ -59,10 +96,12 @@ declare global {
   };
 
   interface HTMLElementTagNameMap {
+    'agappe-component': HTMLAgappeComponentElement
     'my-component': HTMLMyComponentElement
   }
 
   interface ElementTagNameMap {
+    'agappe-component': HTMLAgappeComponentElement;
     'my-component': HTMLMyComponentElement;
   }
 
