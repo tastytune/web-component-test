@@ -1,5 +1,7 @@
 import { Component, Prop } from '@stencil/core';
-import { format } from '../../utils/utils';
+import { user_name } from '../../utils/utils';
+import { event_title } from '../../utils/utils';
+//import { day_time } from '../../utils/utils';
 
 @Component({
   tag: 'agappe-component',
@@ -12,29 +14,38 @@ export class AgappeComponent {
    */
   @Prop() first: string;
 
-  /**
-   * The middle name
-   */
-  @Prop() middle: string;
-
-  /**
+ /**
    * The last name
    */
   @Prop() last: string;
 
-  private getText(): string {
-    return format(this.first, this.middle, this.last);
+
+
+  private getName(): string {
+    return user_name(this.first, this.last);
   }
+    /**
+   * The title of the event
+   */
+  @Prop() title_event: string;
+
+  private getTitle(): string {
+    return event_title(this.title_event);
+  }
+  @Prop() day: string;
+  @Prop() time: string;
+
+ 
 
   render() {
     return <div class="card">
-      <h1>{this.getText()}</h1>
-      <time>14-03-2019</time>
-      <h3>Fulanito Perez</h3>
+      <h1>{this.getTitle()}</h1>
+      <time>{this.day}</time>
+      <h3>{this.getName()}</h3>
       <address>Box 564, Disneyland</address> 
       <div class="rating" ><div class="star"></div><div class="star"></div>  </div>
          
-      <time>20:00</time>      
+      <time>{this.time}</time>      
       </div>;
     
   }

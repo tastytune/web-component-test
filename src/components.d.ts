@@ -13,6 +13,7 @@ import '@stencil/core';
 export namespace Components {
 
   interface AgappeComponent {
+    'day': string;
     /**
     * The first name
     */
@@ -21,12 +22,14 @@ export namespace Components {
     * The last name
     */
     'last': string;
+    'time': string;
     /**
-    * The middle name
+    * The title of the event
     */
-    'middle': string;
+    'title_event': string;
   }
   interface AgappeComponentAttributes extends StencilHTMLAttributes {
+    'day'?: string;
     /**
     * The first name
     */
@@ -35,10 +38,11 @@ export namespace Components {
     * The last name
     */
     'last'?: string;
+    'time'?: string;
     /**
-    * The middle name
+    * The title of the event
     */
-    'middle'?: string;
+    'title_event'?: string;
   }
 }
 

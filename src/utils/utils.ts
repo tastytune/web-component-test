@@ -1,8 +1,16 @@
 
-export function format(first: string, middle: string, last: string): string {
+export function user_name(first: string,last: string): string {
   return (
-    (first || '') +
-    (middle ? ` ${middle}` : '') +
-    (last ? ` ${last}` : '')
+    (first || '') +    
+    (last ? ` ${last}` : '') 
+   
   );
 }
+
+export function event_title( title: string): string {
+  return (
+    (title ? ` ${title}` : '') 
+   
+  );
+}
+
