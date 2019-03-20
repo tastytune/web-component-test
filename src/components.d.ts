@@ -40,46 +40,15 @@ export namespace Components {
     */
     'middle'?: string;
   }
-
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
-  }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
-  }
 }
 
 declare global {
   interface StencilElementInterfaces {
     'AgappeComponent': Components.AgappeComponent;
-    'MyComponent': Components.MyComponent;
   }
 
   interface StencilIntrinsicElements {
     'agappe-component': Components.AgappeComponentAttributes;
-    'my-component': Components.MyComponentAttributes;
   }
 
 
@@ -89,20 +58,12 @@ declare global {
     new (): HTMLAgappeComponentElement;
   };
 
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
-
   interface HTMLElementTagNameMap {
     'agappe-component': HTMLAgappeComponentElement
-    'my-component': HTMLMyComponentElement
   }
 
   interface ElementTagNameMap {
     'agappe-component': HTMLAgappeComponentElement;
-    'my-component': HTMLMyComponentElement;
   }
 
 
