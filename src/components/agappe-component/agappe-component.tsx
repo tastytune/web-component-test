@@ -34,6 +34,7 @@ export class AgappeComponent {
   }
   @Prop() day: string;
   @Prop() time: string;
+  @Prop() address: string;
 
  
 
@@ -42,7 +43,7 @@ export class AgappeComponent {
       <h1>{this.getTitle()}</h1>
       <time>{this.day}</time>
       <h3>{this.getName()}</h3>
-      <address>Box 564, Disneyland</address> 
+      <address>{this.address}</address> 
       <div class="rating" ><div class="star"></div><div class="star"></div>  </div>
          
       <time>{this.time}</time>      
