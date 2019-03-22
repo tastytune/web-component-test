@@ -49,7 +49,7 @@ time:first-of-type  {
     box-shadow: 1px 1px 1px var(--third-color);
     padding: 0 2vw 0 2vw;
     background-size: 5px 6px;
-    margin: 4vw;
+  
    
 }
 .card:hover {  
