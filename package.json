@@ -1,6 +1,6 @@
 {
   "name": "agape-web-component",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "Agappe Web component",
   "module": "dist/esm/index.js",
   "main": "dist/index.js",
