@@ -1,31 +1,30 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
 
 :host {
-    --main-color: rgb(219, 219, 219); 
-    --secondary-color: white; 
-    --third-color: #bbb; 
-    --fourth-color: rgb(100, 100, 100); 
+    --main-color: red;
+    --secondary-color: #fff;
+    --third-color: #bbb;
+    --fourth-color: #3f0202;
     --fith-color: #ff8a00;
-  }
+    --sixth-color : rgba(255, 255, 255, 0.3);
+    --seventh-color : #531616;
+   }
+   
 
 h1,h3,address,time {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
     font-style: normal;    
-    color:var(--fourth-color);
-    text-shadow: 0px 0px 3px var(--secondary-color);
+    color:var(--secondary-color);
+    text-shadow: 1px 1px 2px var(--sixth-color);
 }
 h1,h3 {    
     margin: 0.5vw;      
 }
-h1 {font-size: 2.5vw;  font-weight: 600; 
-    background: -webkit-gradient(linear,left top,right top,from(#ff8a00),to(#da1b60));
-    background: linear-gradient(to right,#ff8a00,#da1b60);
-    background-clip: border-box;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: rgba(255, 255, 255, 0.3);
-    -webkit-box-decoration-break: clone;
-    box-decoration-break: clone;
-
+h1 {font-size: 2.5vw;  
+    font-weight: 600;
+    color: #1d04044a;
+    text-shadow: 1px 3px 1px var(--secondary-color);
 }
 h3 {font-size: 1.8vw;  font-weight: 500;   }
 
@@ -34,13 +33,14 @@ font-size: 1.2vw;
 display: flex;
 justify-content: flex-end;
 -webkit-justify-content:flex-end;
-
 }
-time:first-of-type  {font-size: 1.8vw;font-weight: 600;}
+time:first-of-type  {
+    font-size: 1.8vw;font-weight: 600;color: #1d04044a;text-shadow: 1px 3px 1px var(--secondary-color);}
 .card {
     
     border: 1px solid var(--third-color); 
-    background: radial-gradient(ellipse at bottom,var(--secondary-color) 0%, var(--main-color)100%);
+    /* background: radial-gradient(ellipse at bottom,var(--secondary-color) 0%, var(--main-color)100%); */
+    background: radial-gradient(ellipse at bottom,#00000091 0,#00000061 100%);
     display: grid;
     grid-template-rows: 3fr 2fr 2fr;
     grid-template-columns: 7fr 3fr;
@@ -48,7 +48,14 @@ time:first-of-type  {font-size: 1.8vw;font-weight: 600;}
     border-radius: 1vw;
     box-shadow: 1px 1px 1px var(--third-color);
     padding: 0 2vw 0 2vw;
+    background-size: 5px 6px;
+    margin: 4vw;
    
+}
+.card:hover {  
+    
+    background: radial-gradient(ellipse at bottom,#000000d5 0,#00000061 100%);
+    background-size: 1px 5px;
 }
 .star {
     width: 0;

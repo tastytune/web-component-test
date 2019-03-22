@@ -44,7 +44,7 @@ export class AgappeComponent {
       <time>{this.day}</time>
       <h3>{this.getName()}</h3>
       <address>{this.address}</address> 
-      <div class="rating" ><div class="star"></div><div class="star"></div>  </div>
+      <div class="rating" ><div class="star"></div></div>
          
       <time>{this.time}</time>      
       </div>;
